@@ -7,7 +7,7 @@ import ujson
 class Url():
     def on_get(self, req, resp):
         req_params = req.params
-        conn = redis.Redis('localhost',db=3)
+        conn = redis.Redis('192.168.237.212',db=3)
         original_url = conn.get(req_params["short_url"])
         resp_json = {}
         resp_json["original_url"] = original_url
@@ -18,7 +18,7 @@ class Url():
         url = req.get_param("original_url", required=True)
         print (url)
         shortened_url = "b."+str(randint(1000,9999))+url[0:5]
-        conn = redis.Redis('localhost',db=3)
+        conn = redis.Redis('192.168.237.212',db=3)
         conn.set(shortened_url,url)
 
 
