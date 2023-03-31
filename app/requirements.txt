@@ -1,6 +1,6 @@
 falcon==2.0.0
 falcon-autocrud==1.0.36
 gunicorn==19.9.0
-redis==2.10.5
+redis==4.4.4
 ujson==1.35
 werkzeug==0.16.0
